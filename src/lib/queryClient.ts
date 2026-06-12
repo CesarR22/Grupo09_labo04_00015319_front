@@ -16,4 +16,8 @@ export const queryKeys = {
   users: ['users'],
   roles: ['roles'],
   permissions: ['permissions'],
+  finanzasCuentas: ['finanzas-cuentas'],
+  finanzasMovimientos: ['finanzas-movimientos'],
+  finanzasCategorias: ['finanzas-categorias'],
 }
+

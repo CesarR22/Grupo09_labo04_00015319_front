@@ -1,4 +1,13 @@
-import { Users, Key, LayoutDashboard } from 'lucide-react'
+import {
+  ArrowLeftRight,
+  Key,
+  Landmark,
+  LayoutDashboard,
+  ListChecks,
+  Tags,
+  Users,
+  Wallet,
+} from 'lucide-react'
 import React from 'react'
 import type { LucideProps } from 'lucide-react'
 import type { MenuItem, SubMenuItem } from '@/models/app/menu'
@@ -32,6 +41,43 @@ export const menu: MenuItem[] = [
     authorized: [roles.all],
     view: true,
     children: [],
+  },
+  {
+    key: RoutesEnum.FINANZAS,
+    icon: createIcon(Wallet),
+    label: 'Finanzas',
+    authorized: [roles.all],
+    view: true,
+    children: [
+      {
+        key: RoutesEnum.FINANZAS_CUENTAS,
+        icon: createIcon(Landmark),
+        label: 'Cuentas',
+        authorized: [roles.all],
+        view: true,
+      },
+      {
+        key: RoutesEnum.FINANZAS_MOVIMIENTOS,
+        icon: createIcon(ListChecks),
+        label: 'Movimientos',
+        authorized: [roles.all],
+        view: true,
+      },
+      {
+        key: RoutesEnum.FINANZAS_TRANSFERENCIAS,
+        icon: createIcon(ArrowLeftRight),
+        label: 'Transferencias',
+        authorized: [roles.all],
+        view: true,
+      },
+      {
+        key: RoutesEnum.FINANZAS_CATEGORIAS,
+        icon: createIcon(Tags),
+        label: 'Categorías',
+        authorized: [roles.all],
+        view: true,
+      },
+    ],
   },
 ]
 
